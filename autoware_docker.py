@@ -29,7 +29,6 @@ class AutowareDocker:
      else:
       self.container_id_ = self.get_container_id()
       if(self.container_id_ != ""):
-        print("111")
         os.system("docker start %s"%(self.container_id_))
         os.system("docker exec -it %s /bin/bash"%self.container_id_)
       else:
